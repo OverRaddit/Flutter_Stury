@@ -38,9 +38,6 @@ class ScheduleProvider extends ChangeNotifier {
     final targetDate = schedule.date;
     final savedSchedule = await repository.createSchedule(schedule: schedule);
 
-    print('schedule:$schedule');
-    print('savedSchedule:$savedSchedule');
-
     cache.update(
         targetDate,
         (value) => [
